@@ -5,16 +5,34 @@
   
 .section-blue {
 
+  background-color: blue;
+  color: orange;
+
+}
+
+.section-white
+{
+color: white;
+}
+
+
+#section-1 {
+  
+color:yellow;
+  background-color: purple;
+
 }
   
 .container {
 
-}
-
-#section-1 {
+  background-color: black;
 
 }
+
 
 #section-6 {
 
+ color: yellow;
+
 }
+
