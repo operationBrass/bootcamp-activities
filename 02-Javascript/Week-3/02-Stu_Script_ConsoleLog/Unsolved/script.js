@@ -1,2 +1,10 @@
 // Open up the console to see this log
-console.log("Your external JavaScript file is linked 🎉");
+
+var name = "brendan";
+var pets = 1000;
+console.log("Your external JavaScript file is linked 🎉" & name);
+
+console.log("I have " pets);
+
+
+
