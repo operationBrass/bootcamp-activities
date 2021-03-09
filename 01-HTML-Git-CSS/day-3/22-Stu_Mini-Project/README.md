@@ -11,7 +11,7 @@ Work in your group to implement the following user stories:
 * As a client, I want the landing page to have a header and footer.
 
 * As a client, I want the landing page to have an image with a caption.
-
+git
 * As a client, I want the landing page to have a contact form.
 
 * As a client, I want the landing page to have a polished and accessible UI.
