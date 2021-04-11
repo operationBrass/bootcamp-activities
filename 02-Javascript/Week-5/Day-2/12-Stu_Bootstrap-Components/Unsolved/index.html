@@ -11,20 +11,69 @@
 </head>
 
 <body>
-
-  <!-- Add a navbar here -->
-  <!-- https://getbootstrap.com/docs/4.5/components/navbar/ -->
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
   <!-- create page margins -->
   <main class="container-fluid my-3">
     <!-- Add a jumbotron here -->
     <!-- https://getbootstrap.com/docs/4.5/components/jumbotron/ -->
 
-    <hr />
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
 
+    <hr/>
     <!-- Add a dismissible alert here -->
     <!-- https://getbootstrap.com/docs/4.5/components/alerts/ -->
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
 
     <hr />
 
@@ -32,17 +81,75 @@
     <!-- Add a form here -->
     <!-- https://getbootstrap.com/docs/4.5/components/forms/ -->
 
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </form>
+
+
     <hr />
 
     <h2>Check Out This List!</h2>
     <!-- Add a list with badges here -->
     <!-- https://getbootstrap.com/docs/4.5/components/list-group -->
 
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Cras justo odio
+        <span class="badge badge-primary badge-pill">14</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Dapibus ac facilisis in
+        <span class="badge badge-primary badge-pill">2</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Morbi leo risus
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+    </ul>
+
     <hr />
 
     <h2>Check Out This Card!</h2>
     <!-- Add a card with a header, list, and footer here  -->
     <!-- https://getbootstrap.com/docs/4.5/components/card/ -->
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+        Featured
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+
 
   </main>
 
