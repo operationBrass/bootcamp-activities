@@ -21,3 +21,17 @@ site3El.children[1].children[0].setAttribute("alt", "women working");
 site3El.children[1].children[0].setAttribute("style", "padding:10px;");
 
 // Write Your Code Below
+
+let allH4Elements = document.getElementsByTagName("H4");
+
+for (i = 0; i < allH4Elements.length; i++)
+{
+    allH4Elements[i].style.fontSize = "30px";
+    allH4Elements[i].style.color = "blue";
+    allH4Elements[i].style.paddingLeft = "10px";
+    allH4Elements[i].style.margin = 0;
+}
+
+
+
+    
