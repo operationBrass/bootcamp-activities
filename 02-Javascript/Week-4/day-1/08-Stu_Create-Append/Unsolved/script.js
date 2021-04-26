@@ -7,11 +7,6 @@ var nameEl = document.createElement("div");
 var favoriteEl = document.createElement("div");
 // Create ordered list element
 var listEl = document.createElement("ol");
-// Create ordered list items
-var li1 = document.createElement("li");
-var li2 = document.createElement("li");
-var li3 = document.createElement("li");
-var li4 = document.createElement("li");
 
 h1El.textContent = "Welcome to my page";
 kittenEl.textContent = "This is my kitten 🐱.";
@@ -24,7 +19,6 @@ infoEl.appendChild(imgEl);
 infoEl.appendChild(kittenEl);
 infoEl.appendChild(nameEl);
 body.appendChild(favoriteEl);
-favoriteEl.appendChild(listEl);
 // Append ordered list 
 favoriteEl.appendChild(listEl);
 
@@ -36,3 +30,27 @@ kittenEl.setAttribute("style", "font-size:25px; text-align:center;");
 favoriteEl.setAttribute("style", "font-size:20px;");
 
 // TODO: Add ordered list items containing four favorite foods
+
+let favFoods = ["Fish (Snapper)","Cat Biscuits","Catniss Everdean", "Mice with Rice"];  
+
+// set the OL styles
+listEl.style.background = "#333333";
+listEl.style.padding = "20px";
+
+
+for (i=0; i <4; i++)
+{   
+    listEl.appendChild(document.createElement("li"));
+    listEl.children[i].textContent = favFoods[i];
+    listEl.children[i].style.color = "white";
+    listEl.children[i].style.padding = "5px";
+    listEl.children[i].style.marginLeft = "35px";
+}
+
+// apply backgrounds manually..
+
+listEl.children[0].style.background = "rgb(90,90,90)";
+listEl.children[1].style.background = "rgb(70,70,70)";
+listEl.children[2].style.background = "rgb(50,50,50)";
+listEl.children[3].style.background = "rgb(30,30,30)";
+
