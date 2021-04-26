@@ -12,7 +12,7 @@ function calculateTotal(total, tipAmount) {
 }
 
 function addTip() {
-  bubble.preventDefault();
+  
   var tipPercentage = tipEl.value * .01;
   var total = totalEl.value;
   var tipAmount = calculateTip(total, tipPercentage);
