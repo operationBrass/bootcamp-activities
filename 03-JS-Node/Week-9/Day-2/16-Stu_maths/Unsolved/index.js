@@ -1,33 +1,32 @@
 // TODO: Import `maths.js`
+
+// TODO: Capture the values passed from the command line into these three variables: `operation`, `numOne` and `numTwo`
+
 const math = require("./maths.js");
-let mathDetails = new Array();
+let operation = process.argv[2];
+let numOne = Number(process.argv[3]);
+let numTwo = Number(process.argv[4]);
 
-for (i=2; i < process.argv.length; i++)
-{
- mathDetails.push(process.argv[i].toLowerCase());
-}
+// TODO: Create a `switch` statement that accepts an `operation` parameter
+// and each `case` uses the corresponding `maths` method
+// to perform each math operation on the two numbers, `numOne` and `numTwo`
 
-switch ( mathDetails[0] )
+switch ( operation.toLowerCase() )
 {
 case "sum":
-    console.log(math.sum(Number(mathDetails[1]),Number(mathDetails[2])));
+    console.log(math.sum(numOne,numTwo));
     break;
 case "difference":
-    console.log(math.difference(Number(mathDetails[1]),Number(mathDetails[2])));
+    console.log(math.difference(numOne,numTwo));
     break;
 case "product":
-    console.log(math.product(Number(mathDetails[1]),Number(mathDetails[2])));
+    console.log(math.product(numOne,numTwo));
     break;
 case "quotient":
-    console.log(math.quotient(Number(mathDetails[1]),Number(mathDetails[2])));
+    console.log(math.quotient(numOne,numTwo));
     break;
 default: 
     console.log("Invalid");
 }
 
 
-// TODO: Capture the values passed from the command line into these three variables: `operation`, `numOne` and `numTwo`
-
-// TODO: Create a `switch` statement that accepts an `operation` parameter
-// and each `case` uses the corresponding `maths` method
-// to perform each math operation on the two numbers, `numOne` and `numTwo`
