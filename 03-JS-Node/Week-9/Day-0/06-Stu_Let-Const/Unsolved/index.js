@@ -1,10 +1,9 @@
 // TODO: Fix the declarations so that the function works properly.
 const addGreetingMessage = (name) => {
-  var message = 'How are you?';
+  var greeting = 'How are you?';
 
   if (name.length > 0) {
-    var message = 'Hello ' + name;
-    console.log(message);
+    var message = `Hello ${name}\n${greeting}`;
   }
 
   console.log(message);
@@ -14,7 +13,7 @@ addGreetingMessage('Tammy');
 
 // TODO: Fix the declarations so that the function works properly.
 const calloutCounter = () => {
-  const callout = 'Outside of the loop';
+  var calloutOuter = 'Outside of the loop';
   var counter = 5;
 
   while (counter > 0) {
@@ -23,7 +22,7 @@ const calloutCounter = () => {
     counter--;
   }
 
-  console.log(callout);
+  console.log(calloutOuter);
 };
 
 calloutCounter();
@@ -32,8 +31,8 @@ calloutCounter();
 const countMatrix = (matrix) => {
   for (var i = 0; i < matrix.length; i++) {
     var line = matrix[i];
-    for (var i = 0; i < line.length; i++) {
-      var element = line[i];
+    for (var j = 0; j < line.length; j++) {
+      var element = line[j];
       console.log(element);
     }
   }
