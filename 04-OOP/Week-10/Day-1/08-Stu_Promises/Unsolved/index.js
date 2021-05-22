@@ -15,15 +15,17 @@ if (!userInput) {
 const studentDistracted = userInput !== 'coding';
 
 // TODO: Refactor the following to use promises
+// TODO: Refactor to call 'practiceCoding()' and chain a 'then()' to log "We are coding in promises!" in the console
+// TODO: Chain a 'catch()' to log "Promise rejected: " and the error
 
 const practiceCoding = new Promise((resolve, reject) => 
 {
 
   if (!studentDistracted) {
-    const coder = "We are coding";
+    const coder = "We are coding in promises";
     resolve(coder);
-    
   } 
+
   else {
 
     const slacking = {
@@ -33,12 +35,12 @@ const practiceCoding = new Promise((resolve, reject) =>
     reject(slacking);
   }
 
+})
+.then((result) => {
+  console.log(result);
+})
+.catch((err) => {
+  console.log(`Error: user is ${err.issue}, ${err.message}`);
 });
 
 
-const callback = (message) => console.log(message);
-const errorCallback = (message) => console.log(message);
-
-// TODO: Refactor to call 'practiceCoding()' and chain a 'then()' to log "We are coding in promises!" in the console
-// TODO: Chain a 'catch()' to log "Promise rejected: " and the error
-practiceCoding(callback, errorCallback);
