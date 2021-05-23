@@ -1,4 +1,5 @@
 // TODO: Add a comment describing what kind of function this is
+//this is a constructor function 
 function Character(name, type, age, strength, hitpoints) {
   this.name = name;
   this.type = type;
@@ -8,6 +9,7 @@ function Character(name, type, age, strength, hitpoints) {
 }
 
 // TODO: Add a comment describing the purpose of `.prototype` in this method declaration
+// add a new mthod called printStats to the Character object(s)
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
@@ -16,6 +18,7 @@ Character.prototype.printStats = function () {
 };
 
 // TODO: Add a comment describing the functionality of this method
+//adds another method to the character object regarding check of hit points
 Character.prototype.isAlive = function () {
   if (this.hitpoints > 0) {
     console.log(`${this.name} is still alive!`);
@@ -27,11 +30,13 @@ Character.prototype.isAlive = function () {
 };
 
 // TODO: Add a comment describing the functionality of this method
+// uses the subtraction assignment operator to remove hitpoints based on the attackers strength
 Character.prototype.attack = function (character2) {
   character2.hitpoints -= this.strength;
 };
 
 // TODO: Add a comment describing the functionality of this method
+// adds a level up function to the character object assigning increase in stats
 Character.prototype.levelUp = function () {
   this.age += 1;
   this.strength += 5;
@@ -47,10 +52,13 @@ rogue.printStats();
 rogue.attack(warrior);
 
 // TODO: Add a comment describing what you expect to see printed in the console
+//stats for warrior
 warrior.printStats();
 
 // TODO: Add a comment describing what you expect to see printed in the console
+// character return true for being Alive if not hitpoints > 0
 warrior.isAlive();
+
 
 rogue.levelUp();
 

@@ -8,9 +8,6 @@ this.tech = tech;
 
 }
 
-
-
-
 // TODO: Include a method called 'introduction()' that introduces the Developer with their name and favorite tech
 
 Developer.prototype.introduction = function() {
