@@ -19,12 +19,19 @@ const darthmaul = {
   forcePoints: 1200,
 };
 
+
+
 // Create one more data entry for the character Obi Wan Kenobi.
 // Enter any values you like for the parameters following the same format as the Yoda and Darth Maul character
 //
 
 // YOUR CODE GOES HERE
-
+const obiWanKenobi = {
+  name: 'Obi Wan Kenobi',
+  role: 'geek',
+  age: 100,
+  forcePoints: 1500,
+};
 //
 
 // Routes
@@ -45,6 +52,9 @@ app.get('/darthmaul', (req, res) => {
 //
 
 // YOUR CODE GOES HERE
+app.get('/obiwan',(req,res) => {
+  res.json(obiWanKenobi);
+})
 //
 //
 
