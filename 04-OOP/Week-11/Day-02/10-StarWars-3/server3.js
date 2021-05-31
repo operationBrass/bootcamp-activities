@@ -36,15 +36,19 @@ app.get('/', (req, res) => {
 });
 
 // What does this route do?
+// return the character objects in JSON format
 app.get('/api/characters', (req, res) => {
   return res.json(characters);
 });
 
 // What does this route do?
+// processes get request and saves the choosen character as a parameter on the request object.
 app.get('/api/characters/:character', (req, res) => {
   // What does this code do?
+  // assigns the text of :character to the params property
   const chosen = req.params.character;
-  console.log(chosen);
+  console.log(req.params);
+
 
   // What does this code do?
   for (let i = 0; i < characters.length; i++) {
