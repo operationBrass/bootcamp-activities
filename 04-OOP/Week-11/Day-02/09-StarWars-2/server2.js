@@ -34,11 +34,15 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Star Wars Page!');
 });
 
-app.get('/:character', (req, res) => {
-  const chosen = req.params.character;
+/*Route parameters are named URL segments that are used to capture the values specified at their position in the URL. */
 
-  // What does this log?
+app.get('/:character', (req, res) => {
+  const chosen = req.params.character; /* The captured values are populated in the req.params object, 
+  with the name of the route parameter specified in the path as their respective keys.*/
+
+  // What does this log? Logs the text after the / in normal case that is the character.
   console.log(chosen);
+
 
   res.end();
 });
