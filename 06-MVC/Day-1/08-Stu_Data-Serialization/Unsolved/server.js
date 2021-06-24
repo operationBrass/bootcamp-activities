@@ -15,6 +15,14 @@ app.use(express.static(path.join(__dirname, 'public/')));
 
 app.use(require('./controllers/dish-routes'));
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.authenticate()
+.then(() => {
+  console.log("connection established");
   app.listen(PORT, () => console.log('Now listening'));
+})
+.catch(err => {
+  console.log(err);
 });
+
+
+

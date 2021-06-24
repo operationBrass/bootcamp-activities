@@ -43,6 +43,8 @@ app.get('/api/characters', (req, res) => res.json(characters));
 app.get('/api/characters/:character', (req, res) => {
   const chosen = req.params.character;
 
+  
+
   console.log(chosen);
 
   // Check each character routename and see if the chosen character is the same as it's routename

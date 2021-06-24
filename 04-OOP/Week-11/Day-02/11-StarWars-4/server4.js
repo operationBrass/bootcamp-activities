@@ -15,6 +15,7 @@ const characters = [
     age: 900,
     forcePoints: 2000,
   },
+
   {
     routeName: 'darthmaul',
     name: 'Darth Maul',
@@ -22,6 +23,7 @@ const characters = [
     age: 200,
     forcePoints: 1200,
   },
+  
   {
     routeName: 'obiwankenobi',
     name: 'Obi Wan Kenobi',
