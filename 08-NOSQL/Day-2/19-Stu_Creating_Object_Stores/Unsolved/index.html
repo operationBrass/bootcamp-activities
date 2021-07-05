@@ -10,6 +10,16 @@
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
     // CODE HERE
+
+    const db_connect = indexedDB.open("BRASS",1)
+    db_connect.onsuccess = (result) => {
+      console.log(result.target.result.name, " loaded successfully")
+    }
+
+    db_connect.onupgradeneeded = ({target}) => {
+      const db = target.result;
+      const newObject = db.createObjectStore("Test");
+    }
     </script>
   </body>
 </html>
