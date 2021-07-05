@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Making An IndexedDB Connection</title>
+</head>
+
+<body>
+  <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+</body>
+</html>
+<script>
+
+  const result = indexedDB.open("BRASS",1)
+
+  result.onsuccess = (brassDB) => {console.log("Database ", brassDB.target.result.name, "has finished loading")};
+
+
+</script>
