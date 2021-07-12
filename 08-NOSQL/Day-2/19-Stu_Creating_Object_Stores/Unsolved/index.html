@@ -18,7 +18,8 @@
 
     db_connect.onupgradeneeded = ({target}) => {
       const db = target.result;
-      const newObject = db.createObjectStore("Test");
+      const newObject = db.createObjectStore("Test",{keyPath:"listID" });
+      
     }
     </script>
   </body>

@@ -14,7 +14,23 @@
       request.onupgradeneeded = event => {
         const db = event.target.result;
        // CODE HERE
+       const brassOS = db.createObjectStore("brassStore");
+       brassOS.createIndex("dateDue","dueDate");
+       const brassTransact = db.transaction(["brassStore"],"readwrite");
+       const brassStore = brassTransact.objectStore("brassStore");
+       const brassIndex = brassStore.index("dateDue");
+
+        // Adds data to our objectStore
+        brassStore.add({ storeID: "1", food: "Cherry" });
+        brassStore.add({ storeID: "2", food: "Banana" });
+        brassStore.add({ storeID: "3", food: "Orange" });
+        brassStore.add({ storeID: "4", food: "Tomato" });
+
+        
+
       }
+
+
 
       
       request.onsuccess = () => {
