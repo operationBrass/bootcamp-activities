@@ -26,7 +26,9 @@ export default function Display() {
         // TODO: Write logic that will render a Card component for each dog
         // TODO: Pass `name` and `description` to the card as props
         // TODO: Add a `key` property that is set to the ID for each dog
+       <Card key={dog.id} name={dog.name} description={dog.description} />
       ))}
     </div>
   );
 }
+ 
