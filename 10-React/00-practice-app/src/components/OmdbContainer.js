@@ -15,7 +15,7 @@ class OmdbContainer extends Component {
 
   // TODO: componentDidMount method needs to be fixed
   componentDidMount() {
-    searchMovies("The Matrix")
+    this.searchMovies("The Matrix")
   }
   searchMovies = (query) => {
     API.search(query)
@@ -25,12 +25,13 @@ class OmdbContainer extends Component {
 
   // TODO: handleInputChange method needs to be fixed
   handleInputChange = event => {
-    this.state.search = e.target.value
+    this.setState = {value: event.target.value}
   };
 
   // TODO: handleFormSubmit method needs to call `this.searchMovies(this.state.search)`
   handleFormSubmit = event => {
-    this.searchMovies(this.state.search)
+    event.preventDefault();
+    this.searchMovies(this.state.search);
   };
 
   render() {
